@@ -44,14 +44,14 @@ y就是，为单层感知器的输出结果。
 
 在1.1.3中我们已知单层感知器表达式可以写成：
 
-![单层感知器表达式](图片网址)
+![单层感知器表达式](https://github.com/Joker2770/My_TensorFlow_Lab/blob/master/Resource/单层感知器表达式.jpg)
 
 (1.1)中y表示感知器的输出
 f是sign激活函数
 n是输入信号的个数
 i=0,1,2...
 
-![第i个权值的变化](图片网址)
+![第i个权值的变化](https://github.com/Joker2770/My_TensorFlow_Lab/blob/master/Resource/第i个权值的变化.jpg)
 
 (1.2)中*delta（Wi）*表示第i个权值的变化；
 表示学习率(Learning rate)，用来调节权值变化的大小；
@@ -62,11 +62,11 @@ t是正确的标签(target)。
 t=y时，*delta（Wi）*为0；t=1，y=-1时，*delta（Wi）*为2；t=-1，y=1时，*delta（Wi）*为-2。
 由(1.2)可以推出：
 
-![权值变化推导](图片网址)
+![权值变化推导](https://github.com/Joker2770/My_TensorFlow_Lab/blob/master/Resource/权值变化推导.jpg)
 
 权值的调整公式为：
 
-![权值的调整公式](图片网址)
+![权值的调整公式](https://github.com/Joker2770/My_TensorFlow_Lab/blob/master/Resource/权值的调整公式.jpg)
 
 ### 单层感知器的学习规则计算举例
 
@@ -74,23 +74,23 @@ t=y时，*delta（Wi）*为0；t=1，y=-1时，*delta（Wi）*为2；t=-1，y=1�
 
 Step1：我们首先计算感知器的输出：
 
-![计算感知器输出](图片网址)
+![计算感知器输出](https://github.com/Joker2770/My_TensorFlow_Lab/blob/master/Resource/计算感知器输出.jpg)
 
 由于y=-1与正确的标签t=1不相同，所以需要对感知器中的权值进行调节。
 
-![对感知器中的权值进行调节](图片网址)
+![对感知器中的权值进行调节](https://github.com/Joker2770/My_TensorFlow_Lab/blob/master/Resource/对感知器中的权值进行调节.jpg)
 
 Step2：重新计算感知器的输出：
 
-![重新计算感知器输出](图片网址)
+![重新计算感知器输出](https://github.com/Joker2770/My_TensorFlow_Lab/blob/master/Resource/重新计算感知器的输出.jpg)
 
 由于y=-1与正确的标签t=1不相同，所以需要对感知器中的权值进行调节。
 
-![对感知器中的权值进行调节1](图片网址)
+![对感知器中的权值进行调节1](https://github.com/Joker2770/My_TensorFlow_Lab/blob/master/Resource/对感知器中的权值进行调节1.jpg)
 
 Step3：重新计算感知器的输出：
 
-![重新计算感知器输出1](图片网址)
+![重新计算感知器输出1](https://github.com/Joker2770/My_TensorFlow_Lab/blob/master/Resource/重新计算感知器的输出1.jpg)
 
 由于y=1与正确的标签t=1相同，说明感知器经过训练后得到了我们想要的结果，我们就可以结束训练了。
 
