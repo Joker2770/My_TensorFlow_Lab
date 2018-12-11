@@ -59,7 +59,7 @@ t是正确的标签(target)。
 
 因为单层感知器的激活函数为sign函数，所以t和y的取值都为±1
 
-t=y时，***delta（Wi）***为0；t=1，y=-1时，***delta（Wi）***为2；t=-1，y=1时，***delta（Wi）***为-2。
+t=y时， ***delta（Wi）*** 为0；t=1，y=-1时， ***delta（Wi）*** 为2；t=-1，y=1时， ***delta（Wi）*** 为-2。
 由(1.2)可以推出：
 
 ![权值变化推导](https://github.com/Joker2770/My_TensorFlow_Lab/blob/master/Resource/权值变化推导.jpg)
