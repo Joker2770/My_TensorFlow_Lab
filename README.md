@@ -1,7 +1,7 @@
 Tensorflow implementations with python
 =
 
-# 1、从神经细胞到神经网络
+# 1、从神经细胞到神经网络(PerceptronLearnRule.py & PerceptronLearnRule_matrix.py)
 
 现在人们热议的神经网络算法结构实质是一种仿生技术，灵感来源于神经细胞。神经细胞构是构成神经系统的基本单元，简称为神经元。神经元主要由三部分构成：①细胞体；②轴突；③树突。如下图所示
 
@@ -53,13 +53,13 @@ i=0,1,2...
 
 ![第i个权值的变化](https://github.com/Joker2770/My_TensorFlow_Lab/blob/master/Resource/第i个权值的变化.jpg)
 
-(1.2)中*delta（Wi）*表示第i个权值的变化；
+(1.2)中 ***delta（Wi）*** 表示第i个权值的变化；
 表示学习率(Learning rate)，用来调节权值变化的大小；
 t是正确的标签(target)。
 
 因为单层感知器的激活函数为sign函数，所以t和y的取值都为±1
 
-t=y时，*delta（Wi）*为0；t=1，y=-1时，*delta（Wi）*为2；t=-1，y=1时，*delta（Wi）*为-2。
+t=y时，***delta（Wi）***为0；t=1，y=-1时，***delta（Wi）***为2；t=-1，y=1时，***delta（Wi）***为-2。
 由(1.2)可以推出：
 
 ![权值变化推导](https://github.com/Joker2770/My_TensorFlow_Lab/blob/master/Resource/权值变化推导.jpg)
@@ -94,7 +94,7 @@ Step3：重新计算感知器的输出：
 
 由于y=1与正确的标签t=1相同，说明感知器经过训练后得到了我们想要的结果，我们就可以结束训练了。
 
-单层感知器学习规则计算，python实现代码为，结果如下：
+单层感知器学习规则计算，python实现代码为PerceptronLearnRule.py，结果如下：
 
 ~~~
 -5 0 0
@@ -103,7 +103,7 @@ Step3：重新计算感知器的输出：
 done
 ~~~
 
-单层感知器学习规则计算举例(矩阵计算)，python实现代码为，结果如下
+单层感知器学习规则计算举例(矩阵计算)，python实现代码为PerceptronLearnRule_matrix.py，结果如下
 
 ~~~
 [[-5]
