@@ -3,7 +3,7 @@ Tensorflow implementations with python
 
 # 1、从神经细胞到神经网络(PerceptronLearnRule.py & PerceptronLearnRule_matrix.py)
 
-# 1.1生物神经网络
+## 1.1生物神经网络
 
 人工神经网络ANN的设计实际上是从生物体的神经网络结构获得的灵感。生物神经网络一般是指生物的大脑神经元，细胞，触电等组成的网络，用于产生生物的意识，帮助生物进行思考和行动。
 
