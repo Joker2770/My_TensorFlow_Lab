@@ -57,13 +57,13 @@ i=0,1,2...
 
 ![第i个权值的变化](https://github.com/Joker2770/My_TensorFlow_Lab/blob/master/Resource/第i个权值的变化.jpg)
 
-(1.2)中 ***delta（Wi）*** 表示第i个权值的变化；
+(1.2)中 ***ΔWi*** 表示第i个权值的变化；
 ***η*** 表示学习率(Learning rate)，用来调节权值变化的大小；
 t是正确的标签(target)。
 
 因为单层感知器的激活函数为sign函数，所以t和y的取值都为±1
 
-t=y时， ***delta（Wi）*** 为0；t=1，y=-1时， ***delta（Wi）*** 为2；t=-1，y=1时， ***delta（Wi）*** 为-2。
+t=y时， ***ΔWi*** 为0；t=1，y=-1时， ***ΔWi*** 为2；t=-1，y=1时， ***ΔWi*** 为-2。
 由(1.2)可以推出：
 
 ![权值变化推导](https://github.com/Joker2770/My_TensorFlow_Lab/blob/master/Resource/权值变化推导.jpg)
