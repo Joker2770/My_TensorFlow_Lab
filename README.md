@@ -143,7 +143,7 @@ _3.学习率太小，模型参数调整太慢，迭代次数太多。_  <br>
 
 ![不同大小的学习率对模型训练的影响](https://github.com/Joker2770/My_TensorFlow_Lab/blob/master/Resource/不同大小的学习率对模型训练的影响.jpg)
 
-图1.2.6 不同大小的学习率对模型训练的影响
+**图1.2.6 不同大小的学习率对模型训练的影响**
 
 图中的纵坐标loss代表代价函数，在后面的章节中有更详细的介绍，这里我们可以把它近似理解为模型的预测值与真实值之间的误差，
 我们训练模型的主要目的就是为了降低loss值，减少模型预测值与真实值之间的误差。横坐标Epoch代表模型的迭代周期，
@@ -201,7 +201,7 @@ _3. 设定最大迭代次数，当迭代超过最大次数就停止。_ <br>
 
 ![单层感知器](https://github.com/Joker2770/My_TensorFlow_Lab/blob/master/Resource/单层感知器.jpg)
 
-图1.2.9.1 单层感知器
+**图1.2.9.1 单层感知器**
 
 单层感知器案例SinglePerceptron.py，输出结果为:
 
@@ -244,7 +244,7 @@ Finished
 
 ![单层感知器比较理想的分类边界](https://github.com/Joker2770/My_TensorFlow_Lab/blob/master/Resource/单层感知器比较理想的分类边界.jpg)
 
-图1.2.9.2 单层感知器比较理想的分类边界
+**图1.2.9.2 单层感知器比较理想的分类边界**
 
 # 2、一元二次方程(OnePowerDistance.py)
 
