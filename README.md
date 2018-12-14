@@ -232,9 +232,9 @@ weights: [[-0.41390143]
  [ 0.00649672]]
 Finished
 
-![单层感知器案例输出](https://github.com/Joker2770/My_TensorFlow_Lab/blob/master/Resource/单层感知器案例输出.png)
-
 ~~~
+
+![单层感知器案例输出](https://github.com/Joker2770/My_TensorFlow_Lab/blob/master/Resource/单层感知器案例输出.png)
 
 因为权值的初始化使用的是随机的初始化方式，所以每一次训练的周期以及画出来的图可能都是不一样的。这里我们可以看到单层感知器的一个问题，
 虽然单层感知器可以顺利地完成分类任务，但是使用单层感知器来做分类的时候，最后得到的分类边界距离蓝色的边界点比较近，而距离黄色的边界点比较远，
