@@ -12,7 +12,9 @@ Tensorflow implementations with python
 
 ![神经元结构](https://github.com/Joker2770/My_TensorFlow_Lab/blob/master/Resource/nerve_cell.jpg)
 
-## 1.2单层感知器(PerceptronLearnRule.py & PerceptronLearnRule_matrix.py & SinglePerceptron.py)
+## 1.2单层感知器([PerceptronLearnRule.py](https://github.com/Joker2770/My_TensorFlow_Lab/blob/master/src/PerceptronLearnRule.py) 
+& [PerceptronLearnRule_matrix.py](https://github.com/Joker2770/My_TensorFlow_Lab/blob/master/src/PerceptronLearnRule_matrix.py) 
+& [SinglePerceptron.py](https://github.com/Joker2770/My_TensorFlow_Lab/blob/master/src/SinglePerceptron.py))
 
 ### 1.2.1单层感知器介绍
 
@@ -258,5 +260,5 @@ purelin函数也称为线性函数，函数图像为图3.1：
 
 _图3.1 线性函数_ <br>
 
-# 2、一元二次方程(OnePowerDistance.py)
+# 2、一元二次方程([OnePowerDistance.py](https://github.com/Joker2770/My_TensorFlow_Lab/blob/master/src/OnePowerDistance.py))
 
