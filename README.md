@@ -12,7 +12,8 @@ Tensorflow implementations with python
 
 ![神经元结构](https://github.com/Joker2770/My_TensorFlow_Lab/blob/master/Resource/nerve_cell.jpg)
 
-## 1.2单层感知器([PerceptronLearnRule.py](https://github.com/Joker2770/My_TensorFlow_Lab/blob/master/src/PerceptronLearnRule.py) 
+## 1.2单层感知器
+([PerceptronLearnRule.py](https://github.com/Joker2770/My_TensorFlow_Lab/blob/master/src/PerceptronLearnRule.py) 
 & [PerceptronLearnRule_matrix.py](https://github.com/Joker2770/My_TensorFlow_Lab/blob/master/src/PerceptronLearnRule_matrix.py) 
 & [SinglePerceptron.py](https://github.com/Joker2770/My_TensorFlow_Lab/blob/master/src/SinglePerceptron.py))
 
@@ -106,7 +107,7 @@ Step3：重新计算感知器的输出：
 
 由于y=1与正确的标签t=1相同，说明感知器经过训练后得到了我们想要的结果，我们就可以结束训练了。
 
-单层感知器学习规则计算，python实现代码为PerceptronLearnRule.py，结果如下：
+单层感知器学习规则计算，python实现代码为[PerceptronLearnRule.py](https://github.com/Joker2770/My_TensorFlow_Lab/blob/master/src/PerceptronLearnRule.py)，结果如下：
 
 ~~~
 -5 0 0
@@ -115,7 +116,7 @@ Step3：重新计算感知器的输出：
 done
 ~~~
 
-单层感知器学习规则计算举例(矩阵计算)，python实现代码为PerceptronLearnRule_matrix.py，结果如下
+单层感知器学习规则计算举例(矩阵计算)，python实现代码为[PerceptronLearnRule_matrix.py](https://github.com/Joker2770/My_TensorFlow_Lab/blob/master/src/PerceptronLearnRule_matrix.py)，结果如下
 
 ~~~
 [[-5]
@@ -205,7 +206,7 @@ _3. 设定最大迭代次数，当迭代超过最大次数就停止。_ <br>
 
 **图1.2.9.1 单层感知器**
 
-单层感知器案例SinglePerceptron.py，输出结果为:
+单层感知器案例[SinglePerceptron.py](https://github.com/Joker2770/My_TensorFlow_Lab/blob/master/src/SinglePerceptron.py)，输出结果为:
 
 ~~~
 epoch: 1
