@@ -256,7 +256,7 @@ purelin函数也称为线性函数，函数图像为图3.1：
 
 ![线性函数](https://github.com/Joker2770/My_TensorFlow_Lab/blob/master/Resource/线性函数.jpg)
 
-	 _图3.1 线性函数_ 
+_图3.1 线性函数_ <br>
 
 # 2、一元二次方程(OnePowerDistance.py)
 
