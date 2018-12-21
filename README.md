@@ -1,7 +1,7 @@
 Tensorflow implementations with python
 =
 
-# 1、从神经细胞到神经网络(PerceptronLearnRule.py & PerceptronLearnRule_matrix.py)
+# 1、从神经细胞到神经网络
 
 ## 1.1生物神经网络
 
@@ -12,7 +12,7 @@ Tensorflow implementations with python
 
 ![神经元结构](https://github.com/Joker2770/My_TensorFlow_Lab/blob/master/Resource/nerve_cell.jpg)
 
-## 1.2单层感知器
+## 1.2单层感知器(PerceptronLearnRule.py & PerceptronLearnRule_matrix.py & SinglePerceptron.py)
 
 ### 1.2.1单层感知器介绍
 
@@ -245,6 +245,18 @@ Finished
 ![单层感知器比较理想的分类边界](https://github.com/Joker2770/My_TensorFlow_Lab/blob/master/Resource/单层感知器比较理想的分类边界.jpg)
 
 **图1.2.9.2 单层感知器比较理想的分类边界**
+
+## 1.3线性神经网络
+
+### 1.3.1线性神经网络介绍
+
+线性神经网络跟单层感知器非常类似，只是把单层感知器的sign激活函数改成了purelin函数: 
+***y = x (3.5) *** 
+purelin函数也称为线性函数，函数图像为图3.1：
+
+![线性函数](https://github.com/Joker2770/My_TensorFlow_Lab/blob/master/Resource/线性函数.jpg)
+
+	 _图3.1 线性函数_ 
 
 # 2、一元二次方程(OnePowerDistance.py)
 
