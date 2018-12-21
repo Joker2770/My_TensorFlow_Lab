@@ -251,7 +251,7 @@ Finished
 ### 1.3.1线性神经网络介绍
 
 线性神经网络跟单层感知器非常类似，只是把单层感知器的sign激活函数改成了purelin函数: 
-***y = x (3.5) *** 
+ ***y = x (3.5)*** 
 purelin函数也称为线性函数，函数图像为图3.1：
 
 ![线性函数](https://github.com/Joker2770/My_TensorFlow_Lab/blob/master/Resource/线性函数.jpg)
