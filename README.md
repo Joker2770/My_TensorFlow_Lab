@@ -264,7 +264,7 @@ _图3.1 线性函数_ <br>
 ### 1.3.2线性神经网络分类案例
 
 参考1.2.9中的案例，我们这次使用线性神经网络来完成相同的任务。线性神经网络的程序跟单层感知器的程序非常相似，大家可以思考一下需要修改哪些地方。
-代码[LinerNN.py](https://github.com/Joker2770/My_TensorFlow_Lab/blob/master/src/LinerNN.py)：线性神经网络案例
+代码[LinearNN.py](https://github.com/Joker2770/My_TensorFlow_Lab/blob/master/src/LinearNN.py)：线性神经网络案例
 
 程序的输出结果为：
 
