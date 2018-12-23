@@ -254,12 +254,54 @@ Finished
 ### 1.3.1线性神经网络介绍
 
 线性神经网络跟单层感知器非常类似，只是把单层感知器的sign激活函数改成了purelin函数: <br>
- ***y = x (1.5)*** <br>
+ ***y = x             (1.5)*** <br>
 purelin函数也称为线性函数，函数图像为图3.1：
 
 ![线性函数](https://github.com/Joker2770/My_TensorFlow_Lab/blob/master/Resource/线性函数.jpg)
 
 _图3.1 线性函数_ <br>
+
+### 1.3.2线性神经网络分类案例
+
+参考1.2.9中的案例，我们这次使用线性神经网络来完成相同的任务。线性神经网络的程序跟单层感知器的程序非常相似，大家可以思考一下需要修改哪些地方。
+代码[LinerNN.py](https://github.com/Joker2770/My_TensorFlow_Lab/blob/master/src/LinerNN.py)：线性神经网络案例
+
+程序的输出结果为：
+
+![线性神经网络案例结果](https://github.com/Joker2770/My_TensorFlow_Lab/blob/master/Resource/线性神经网络案例结果.jpg)
+
+线性神经网络的程序有两处是对单层感知器程序进行了修改。
+第一处是在train()函数中，将Y = np.sign(np.dot(X,W))改成了Y = np.dot(X,W)。因为线性神经网络的激活函数是y=x，所以这里就不需要np.sign()了。
+第二处是在for i in range(100)中，把原来的：
+~~~
+# 训练100次
+for i in range(100):
+    # 更新一次权值
+    train()
+    # 打印当前训练次数
+    print ('epoch:',i + 1)
+    # 打印当前权值
+    print ('weights:',W)
+    # 计算当前输出
+	Y = np.sign(np.dot(X,W))
+    # .all()表示Y中的所有值跟T中所有值都对应相等，结果才为真
+    if (Y == T).all():
+        print ('Finished')
+        # 跳出循环
+        break
+~~~
+改成了：
+~~~
+# 训练100次
+for i in range(100):
+    # 更新一次权值
+    train()
+~~~
+在单层感知器中，当y等于t时，Δw=0就会为0，模型训练就结束了，所以可以提前跳出循环。单层感知器使用的模型收敛条件是两次迭代模型的权值已经不再发生变化，则可以认为模型收敛。
+而在线性神经网络中，y会一直逼近t的值，不过一般不会得到等于t的值，所以可以对模型不断进行优化。线性神经网络使用的模型收敛条件是设置一个最大迭代次数
+，当训练了一定次数后就可以认为模型收敛了。
+对比单层感知器和线性神经网络所得到的结果，我们可以看得出线性神经网络所得到的结果会比单层感知器得到的结果更理想。但是线性神经网络也还不够优秀
+，当使用它处理非线性问题的时候，它就不能很好完成工作了。
 
 # 2、一元二次方程([OnePowerDistance.py](https://github.com/Joker2770/My_TensorFlow_Lab/blob/master/src/OnePowerDistance.py))
 
