@@ -303,5 +303,38 @@ for i in range(100):
 对比单层感知器和线性神经网络所得到的结果，我们可以看得出线性神经网络所得到的结果会比单层感知器得到的结果更理想。但是线性神经网络也还不够优秀
 ，当使用它处理非线性问题的时候，它就不能很好完成工作了。
 
+### 1.3.3线性神经网络处理异或问题
+
+首先我们先来回顾一下异或运算。 
+_0与0异或等于0_ <br> 
+_0与1异或等于1_ <br> 
+_1与0异或等于1 1与1异或等于0_ <br>
+
+代码[LinearXOR.py](https://github.com/Joker2770/My_TensorFlow_Lab/blob/master/src/LinearXOR.py)：线性神经网络-异或问题
+
+程序的输出结果为：
+
+![线性神经网络_异或问题](https://github.com/Joker2770/My_TensorFlow_Lab/blob/master/Resource/线性神经网络_异或问题.jpg)
+
+从结果我们能够看出用一条直线并不能把异或问题中的两个类别给划分开来，因为这是一个非线性的问题，可以使用非线性的方式来进行求解。
+其中一种方式是我们可以给神经网络加入非线性的输入。代码[LinearXOR.py](https://github.com/Joker2770/My_TensorFlow_Lab/blob/master/src/LinearXOR.py)
+中的输入信号只有3个信号x0,x1,x2，我们可以利用这3个信号得到带有非线性特征的输入：
+x0,x1,x2,x1×x1,x1×x2,x2×x2，其中x1×x1,x1×x2,x2×x2为非线性特征。神经网络结构图如图3.2所示：
+
+![神经网络结构](https://github.com/Joker2770/My_TensorFlow_Lab/blob/master/Resource/神经网络结构.jpg)
+
+_图3.2 引入非线性输入的线性神经网络_ <br>
+
+代码[nLinearXOR.py](https://github.com/Joker2770/My_TensorFlow_Lab/blob/master/src/nLinearXOR.py)：线性神经网络引入非线性特征解决异或问题
+
+程序的输出结果为：~[[-0.98650596] [0.990989 ] [0.990989 ][-0.99302749]]~
+
+![线性神经网络引入非线性特征解决异或问题结果](https://github.com/Joker2770/My_TensorFlow_Lab/blob/master/Resource/线性神经网络引入非线性特征解决异或问题结果.jpg)
+
+从输出的预测值我们可以看出，预测值与真实标签的数值是非常接近的，几乎相等，说明预测值很符合我们想要的结果。而从输出图片中也能观察到两条曲线的内部是负样本所属的类别，
+两条曲线的外部是正样本所属的类别。这两条曲线很好地把两个类别区分开了。
+线性神经网络可以通过引入非线性的输入特征来解决非线性问题，但这并不是一种非常好的解决方案。
+下一章节我们将介绍一种新的神经网络，BP(Back Propagation)神经网络，通过学习BP神经网络我们可以获得更好的解决问题的思路。
+
 # 2、一元二次方程([OnePowerDistance.py](https://github.com/Joker2770/My_TensorFlow_Lab/blob/master/src/OnePowerDistance.py))
 
