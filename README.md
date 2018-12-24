@@ -327,7 +327,7 @@ _图3.2 引入非线性输入的线性神经网络_ <br>
 
 代码[nLinearXOR.py](https://github.com/Joker2770/My_TensorFlow_Lab/blob/master/src/nLinearXOR.py)：线性神经网络引入非线性特征解决异或问题
 
-程序的输出结果为： ~[[-0.98650596] [0.990989 ] [0.990989 ][-0.99302749]]~
+程序的输出结果为： ~~~[[-0.98650596] [0.990989 ] [0.990989 ][-0.99302749]]~~~
 
 ![线性神经网络引入非线性特征解决异或问题结果](https://github.com/Joker2770/My_TensorFlow_Lab/blob/master/Resource/线性神经网络引入非线性特征解决异或问题结果.jpg)
 
