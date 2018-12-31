@@ -1,7 +1,7 @@
 Tensorflow implementations with python
 =
 
-# 1、从神经细胞到神经网络
+# 一、从神经细胞到神经网络
 
 ## 1.1生物神经网络
 
@@ -373,9 +373,9 @@ N表示训练样本的个数(注意这里的N是一个大于0的整数，不是�
 
 公式可以用矩阵形式来表达，也可以拆分为用∑来累加各个训练样本的真实标签与网络输出的误差的平方。
 
-# 2、一元二次方程([OnePowerDistance.py](https://github.com/Joker2770/My_TensorFlow_Lab/blob/master/src/OnePowerDistance.py))
+# 二、一元二次方程([OnePowerDistance.py](https://github.com/Joker2770/My_TensorFlow_Lab/blob/master/src/OnePowerDistance.py))
 
-# 3、mnist数据集([mnist](https://github.com/Joker2770/My_TensorFlow_Lab/blob/master/src/mnist))
+# 三、mnist数据集([mnist](https://github.com/Joker2770/My_TensorFlow_Lab/blob/master/src/mnist))
 
-# 4、fashion_mnist数据集([fashion_mnist](https://github.com/Joker2770/My_TensorFlow_Lab/blob/master/src/fashion_mnist))
+# 四、fashion_mnist数据集([fashion_mnist](https://github.com/Joker2770/My_TensorFlow_Lab/blob/master/src/fashion_mnist))
 
