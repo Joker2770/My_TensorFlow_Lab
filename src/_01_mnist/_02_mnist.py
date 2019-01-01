@@ -105,7 +105,10 @@ model.fit(train_images, train_labels,
 			validation_data = (test_images, test_labels))  # pass callback to training
 			
 model = create_model()
-model.load_weights(latest)
+if latest != None:
+	model.load_weights(latest)
+else:
+	model.load_weights("training_2/cp-0005.ckpt")
 model.summary()
 loss,acc = model.evaluate(test_images, test_labels)
 print("Restored model, accuracy: {:5.2f}%".format(100*acc))
