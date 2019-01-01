@@ -51,6 +51,7 @@ plt.figure()
 plt.imshow(train_images[0])
 plt.colorbar()
 plt.grid(False)
+plt.show()
 #我们将这些值缩小到 0 到 1 之间，然后将其馈送到神经网络模型。
 #为此，将图像组件的数据类型从整数转换为浮点数，然后除以 255
 train_images = train_images / 255.0
@@ -64,6 +65,7 @@ for i in range(25):
 	plt.grid(False)
 	plt.imshow(train_images[i], cmap=plt.cm.binary)
 	plt.xlabel(class_names[train_labels[i]])
+plt.show()
 #第一层 tf.keras.layers.Flatten 将图像格式从二维数组（28x28 像素）转换成一维数组（28 * 28 = 784 像素）。
 #可以将该层视为图像中像素未堆叠的行，并排列这些行。该层没有要学习的参数；它只改动数据的格式。
 #在扁平化像素之后，该网络包含两个 tf.keras.layers.Dense 层的序列。这些层是密集连接或全连接神经层。
