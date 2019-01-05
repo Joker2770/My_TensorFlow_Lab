@@ -450,7 +450,7 @@ Repeat表示不断重复
 
 ![梯度下降参数调整](https://github.com/Joker2770/My_TensorFlow_Lab/blob/master/Resource/梯度下降参数调整.jpg)
 
-表示参数调整
+表示参数调整 <br>
 ***η*** 表示学习率。
 
 # 二、一元二次方程([_07_OnePowerDistance.py](https://github.com/Joker2770/My_TensorFlow_Lab/blob/master/src/_07_OnePowerDistance.py))
