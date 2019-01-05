@@ -13,9 +13,9 @@ Tensorflow implementations with python
 ![神经元结构](https://github.com/Joker2770/My_TensorFlow_Lab/blob/master/Resource/nerve_cell.jpg)
 
 ## 1.2单层感知器
-([PerceptronLearnRule.py](https://github.com/Joker2770/My_TensorFlow_Lab/blob/master/src/PerceptronLearnRule.py) 
-& [PerceptronLearnRule_matrix.py](https://github.com/Joker2770/My_TensorFlow_Lab/blob/master/src/PerceptronLearnRule_matrix.py) 
-& [SinglePerceptron.py](https://github.com/Joker2770/My_TensorFlow_Lab/blob/master/src/SinglePerceptron.py))
+([_01_PerceptronLearnRule.py](https://github.com/Joker2770/My_TensorFlow_Lab/blob/master/src/_01_PerceptronLearnRule.py) 
+& [_02_PerceptronLearnRule_matrix.py](https://github.com/Joker2770/My_TensorFlow_Lab/blob/master/src/_02_PerceptronLearnRule_matrix.py) 
+& [_03_SinglePerceptron.py](https://github.com/Joker2770/My_TensorFlow_Lab/blob/master/src/_03_SinglePerceptron.py))
 
 ### 1.2.1单层感知器介绍
 
@@ -107,7 +107,7 @@ Step3：重新计算感知器的输出：
 
 由于y=1与正确的标签t=1相同，说明感知器经过训练后得到了我们想要的结果，我们就可以结束训练了。
 
-单层感知器学习规则计算，python实现代码为[PerceptronLearnRule.py](https://github.com/Joker2770/My_TensorFlow_Lab/blob/master/src/PerceptronLearnRule.py)，结果如下：
+单层感知器学习规则计算，python实现代码为[_01_PerceptronLearnRule.py](https://github.com/Joker2770/My_TensorFlow_Lab/blob/master/src/_01_PerceptronLearnRule.py)，结果如下：
 
 ~~~
 -5 0 0
@@ -116,7 +116,7 @@ Step3：重新计算感知器的输出：
 done
 ~~~
 
-单层感知器学习规则计算举例(矩阵计算)，python实现代码为[PerceptronLearnRule_matrix.py](https://github.com/Joker2770/My_TensorFlow_Lab/blob/master/src/PerceptronLearnRule_matrix.py)，结果如下
+单层感知器学习规则计算举例(矩阵计算)，python实现代码为[_02_PerceptronLearnRule_matrix.py](https://github.com/Joker2770/My_TensorFlow_Lab/blob/master/src/_02_PerceptronLearnRule_matrix.py)，结果如下
 
 ~~~
 [[-5]
@@ -206,7 +206,7 @@ _3. 设定最大迭代次数，当迭代超过最大次数就停止。_ <br>
 
 **图1.2.9.1 单层感知器**
 
-单层感知器案例[SinglePerceptron.py](https://github.com/Joker2770/My_TensorFlow_Lab/blob/master/src/SinglePerceptron.py)，输出结果为:
+单层感知器案例[_03_SinglePerceptron.py](https://github.com/Joker2770/My_TensorFlow_Lab/blob/master/src/_03_SinglePerceptron.py)，输出结果为:
 
 ~~~
 epoch: 1
@@ -264,7 +264,7 @@ _图3.1 线性函数_ <br>
 ### 1.3.2线性神经网络分类案例
 
 参考1.2.9中的案例，我们这次使用线性神经网络来完成相同的任务。线性神经网络的程序跟单层感知器的程序非常相似，大家可以思考一下需要修改哪些地方。
-代码[LinearNN.py](https://github.com/Joker2770/My_TensorFlow_Lab/blob/master/src/LinearNN.py)：线性神经网络案例
+代码[_04_LinearNN.py](https://github.com/Joker2770/My_TensorFlow_Lab/blob/master/src/_04_LinearNN.py)：线性神经网络案例
 
 程序的输出结果为：
 
@@ -310,14 +310,14 @@ _0与0异或等于0_ <br>
 _0与1异或等于1_ <br> 
 _1与0异或等于1 1与1异或等于0_ <br>
 
-代码[LinearXOR.py](https://github.com/Joker2770/My_TensorFlow_Lab/blob/master/src/LinearXOR.py)：线性神经网络-异或问题
+代码[_05_LinearXOR.py](https://github.com/Joker2770/My_TensorFlow_Lab/blob/master/src/_05_LinearXOR.py)：线性神经网络-异或问题
 
 程序的输出结果为：
 
 ![线性神经网络_异或问题](https://github.com/Joker2770/My_TensorFlow_Lab/blob/master/Resource/线性神经网络_异或问题.jpg)
 
 从结果我们能够看出用一条直线并不能把异或问题中的两个类别给划分开来，因为这是一个非线性的问题，可以使用非线性的方式来进行求解。
-其中一种方式是我们可以给神经网络加入非线性的输入。代码[LinearXOR.py](https://github.com/Joker2770/My_TensorFlow_Lab/blob/master/src/LinearXOR.py)
+其中一种方式是我们可以给神经网络加入非线性的输入。代码[_05_LinearXOR.py](https://github.com/Joker2770/My_TensorFlow_Lab/blob/master/src/_05_LinearXOR.py)
 中的输入信号只有3个信号x0,x1,x2，我们可以利用这3个信号得到带有非线性特征的输入：
 x0,x1,x2,x1×x1,x1×x2,x2×x2，其中x1×x1,x1×x2,x2×x2为非线性特征。神经网络结构图如图3.2所示：
 
@@ -325,7 +325,7 @@ x0,x1,x2,x1×x1,x1×x2,x2×x2，其中x1×x1,x1×x2,x2×x2为非线性特征。�
 
 _图3.2 引入非线性输入的线性神经网络_ <br>
 
-代码[nLinearXOR.py](https://github.com/Joker2770/My_TensorFlow_Lab/blob/master/src/nLinearXOR.py)：线性神经网络引入非线性特征解决异或问题
+代码[_06_nLinearXOR.py](https://github.com/Joker2770/My_TensorFlow_Lab/blob/master/src/_06_nLinearXOR.py)：线性神经网络引入非线性特征解决异或问题
 
 程序的输出结果为：
 ~~~
@@ -373,7 +373,87 @@ N表示训练样本的个数(注意这里的N是一个大于0的整数，不是�
 
 公式可以用矩阵形式来表达，也可以拆分为用∑来累加各个训练样本的真实标签与网络输出的误差的平方。
 
-# 二、一元二次方程([OnePowerDistance.py](https://github.com/Joker2770/My_TensorFlow_Lab/blob/master/src/OnePowerDistance.py))
+## 2.3梯度下降法
+
+2.3.1 梯度下降法(Gradient Descent)介绍
+在求解机器学习算法的模型参数时，梯度下降法是最常用的方法之一。在讲解梯度下降法之前我们先来了解一下导数（derivative）、偏导数（partial derivative）、方向导数（directional derivative）和梯度(gradient)的概念。
+
+导数 —— 导数的概念就如图2.1所示：
+
+![导数](https://github.com/Joker2770/My_TensorFlow_Lab/blob/master/Resource/导数.jpg)
+
+_图2.3.1 导数_ <br>
+
+导数的定义如下：
+
+![导数的定义](https://github.com/Joker2770/My_TensorFlow_Lab/blob/master/Resource/导数的定义.jpg)
+
+总的来说，导数反映的是函数 y = f(x) 在x轴上某一点处沿x轴正方向的变化率/变化趋势。也就是在x轴上的某一点初，如果f '(x)>0，说明f(x)的函数值在x点沿x轴正方向是趋向于增加的；
+如果f '(x)<0，说明f(x)的函数值在x点沿x轴正方向是趋向于减小的。
+
+偏导数 —— 偏导数的定义如下：
+
+![偏导数的定义](https://github.com/Joker2770/My_TensorFlow_Lab/blob/master/Resource/偏导数的定义.jpg)
+
+可以看到，导数与偏导数本质是一致的，都是当自变量的变化量趋近于0时，函数值的变化量与自变量变化量比值的极限。直观地说，
+偏导数也就是函数在某一点上沿坐标轴正方向的的变化率。
+
+区别在于： 　
+导数，指的是一元函数中，函数y = f(x)在某一点处沿x轴正方向的变化率； 　
+偏导数，指的是多元函数中，函数
+
+![多元函数](https://github.com/Joker2770/My_TensorFlow_Lab/blob/master/Resource/多元函数.jpg)
+
+在某一点处沿某一坐标轴
+
+![某一坐标轴](https://github.com/Joker2770/My_TensorFlow_Lab/blob/master/Resource/某一坐标轴.jpg)
+
+正方向的变化率。
+
+方向导数 —— 方向导数的定义如下：
+
+![方向导数的定义](https://github.com/Joker2770/My_TensorFlow_Lab/blob/master/Resource/方向导数的定义.jpg)
+
+其中
+
+![某个方向](https://github.com/Joker2770/My_TensorFlow_Lab/blob/master/Resource/某个方向.jpg)
+
+表示某个方向
+
+在前面导数和偏导数的定义中，均是沿坐标轴正方向讨论函数的变化率。那么当我们讨论函数沿任意方向的变化率时，也就引出了方向导数的定义，即：某一点在某一趋近方向上的导数值。
+
+通俗的解释是： 　
+我们不仅要知道函数在坐标轴正方向上的变化率（即偏导数），而且还要设法求得函数在其他特定方向上的变化率。而方向导数就是函数在其他特定方向上的变化率。
+
+梯度 —— 梯度的定义如下：
+
+![梯度的定义](https://github.com/Joker2770/My_TensorFlow_Lab/blob/master/Resource/梯度的定义.jpg)
+
+对于
+
+![多元函数1](https://github.com/Joker2770/My_TensorFlow_Lab/blob/master/Resource/多元函数1.jpg)
+
+上的某一点来说存在很多个方向导数，梯度的方向是函数在某一点增长最快的方向，梯度的模则是该点上方向导数的最大值，梯度的模等于：
+
+![梯度的模](https://github.com/Joker2770/My_TensorFlow_Lab/blob/master/Resource/梯度的模.jpg)
+
+这里注意三点：
+梯度是一个向量，即有方向有大小
+梯度的方向是最大方向导数的方向
+梯度的值是最大方向导数的值
+
+梯度下降法—— 既然在变量空间的某一点处，函数沿梯度方向具有最大的变化率，那么在优化代价函数的时候，就可以沿着负梯度方向去减小代价函数的值。计算过程可以描述如下：
+
+![梯度下降法](https://github.com/Joker2770/My_TensorFlow_Lab/blob/master/Resource/梯度下降法.jpg)
+
+Repeat表示不断重复
+
+![梯度下降参数调整](https://github.com/Joker2770/My_TensorFlow_Lab/blob/master/Resource/梯度下降参数调整.jpg)
+
+表示参数调整
+***η*** 表示学习率。
+
+# 二、一元二次方程([_07_OnePowerDistance.py](https://github.com/Joker2770/My_TensorFlow_Lab/blob/master/src/_07_OnePowerDistance.py))
 
 # 三、mnist数据集([mnist](https://github.com/Joker2770/My_TensorFlow_Lab/blob/master/src/mnist))
 
