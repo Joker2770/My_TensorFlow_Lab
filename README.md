@@ -509,6 +509,27 @@ _图2.6 从p1,p2初始点开始优化网络_ <br>
 说明我们在使用梯度下降法的时候不同的初始值的选取可能会影响到最后的结果，有些时候我们可以得到loss的全局最小值，或者称为全局最优解。
 而有些时候我们得到的结果可能是loss的局部极小值，或者称为局部最优解。这算是梯度下降法存在的一个问题。
 
+## 2.4 常用激活函数讲解
+
+神经网络的激活函数其实有很多种，在前面的章节中我们介绍过两种激活函数，sign函数和purelin函数。sign函数也称为符号函数，因为sign(x)中x＞0，
+函数结果为1；sign(x)中x＜0，函数结果为-1。purelin函数也称为线性函数，表达式为y=x。这两种激活函数在处理复杂非线性问题的时候都不能得到很好的结果，
+线性函数的分类边界也是线性的，所以不能区别非线性的复杂边界，比如一条直线不能区分异或问题的两个类别。下面我们介绍几个在BP神经网络中常用的非线性激活函数，
+sigmoid函数，tanh函数，softsign函数和ReLU函数，使用这些非线性激活函数可以帮助我们解决复杂的非线性问题。
+
+### 2.4.1 sigmoid函数
+
+sigmoid函数 —— sigmoid函数也称为逻辑函数(logical function)，函数的公式为：
+
+![sigmoid函数公式](https://github.com/Joker2770/My_TensorFlow_Lab/blob/master/Resource/sigmoid函数公式.jpg)
+
+函数图像如图2.7所示：
+
+![sigmoid函数图像](https://github.com/Joker2770/My_TensorFlow_Lab/blob/master/Resource/sigmoid函数图像.png)
+
+_图2.7 sigmoid函数图像_ <br>
+
+图中我们可以看出函数的取值范围是0-1之间，当x趋向于-∞的时候函数值趋向于0；当x趋向于+∞的时候函数值趋向于1。
+
 # 二、一元二次方程([_07_OnePowerDistance.py](https://github.com/Joker2770/My_TensorFlow_Lab/blob/master/src/_07_OnePowerDistance.py))
 
 # 三、mnist数据集([mnist](https://github.com/Joker2770/My_TensorFlow_Lab/blob/master/src/mnist))
