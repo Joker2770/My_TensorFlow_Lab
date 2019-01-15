@@ -530,6 +530,45 @@ _图2.7 sigmoid函数图像_ <br>
 
 图中我们可以看出函数的取值范围是0-1之间，当x趋向于-∞的时候函数值趋向于0；当x趋向于+∞的时候函数值趋向于1。
 
+### 2.4.2 tanh函数
+
+tanh函数 —— tanh函数也称为双曲正切函数，函数的公式为： 
+
+![双曲正切函数公式](https://github.com/Joker2770/My_TensorFlow_Lab/blob/master/Resource/双曲正切函数公式.jpg)
+
+函数图像如图2.8所示： 
+
+![tanh函数图像](https://github.com/Joker2770/My_TensorFlow_Lab/blob/master/Resource/tanh函数图像.png)
+
+_图2.8 tanh函数图像_ <br>
+
+图中我们可以看出函数的取值范围是-1-1之间，当x趋向于-∞的时候函数值趋向于-1；当x趋向于+∞的时候函数值趋向于1。
+
+### 2.4.3 softsign函数
+
+softsign函数 —— softsign函数的公式为：
+
+![softsign函数的公式](https://github.com/Joker2770/My_TensorFlow_Lab/blob/master/Resource/softsign函数的公式.jpg)
+
+函数图像如图2.9所示：
+
+![softsign函数图像](https://github.com/Joker2770/My_TensorFlow_Lab/blob/master/Resource/softsign函数图像.jpg)
+
+_图2.9 softsign函数图像_ <br>
+
+图中我们可以看出函数的取值范围是-1-1之间，当x趋向于-∞的时候函数值趋向于-1；当x趋向于+∞的时候函数值趋向于1。
+
+我们可以通过图2.10对比一下这三种函数的区别：
+
+![三种激活函数的区别](https://github.com/Joker2770/My_TensorFlow_Lab/blob/master/Resource/三种激活函数的区别.jpg)
+
+_图2.10 三种激活函数的区别_ <br>
+
+它们这三个激活函数都是S形函数，形状相似，只不过sigmoid函数取值范围是0-1之间，tanh函数和softsign函数取值范围是-1-1之间。
+我们还可以观察到softsign函数相对于tanh函数而言过渡更加平滑，在x等于0附近函数的数值改变更缓慢。
+
+### 2.4.4ReLU函数
+
 # 二、一元二次方程([_07_OnePowerDistance.py](https://github.com/Joker2770/My_TensorFlow_Lab/blob/master/src/_07_OnePowerDistance.py))
 
 # 三、mnist数据集([mnist](https://github.com/Joker2770/My_TensorFlow_Lab/blob/master/src/mnist))
