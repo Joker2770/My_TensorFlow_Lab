@@ -596,7 +596,7 @@ _图2.13 使用ReLu作为激活函数的分类边界_ <br>
 我使用带有4个隐藏层的神经网络训练出了这个模型。我们发现使用ReLU激活函数得到的分类边界跟使用tanh激活函数得到分类边界是差不多的，并不能看出ReLU函数的特点。
 同样的一个学习任务和数据，我改变了神经网络的层数，只使用2个隐藏层，依然使用ReLU激活函数得到了图2.14的结果：
 
-![使用ReLU作为激活函数的分类边界1](https://github.com/Joker2770/My_TensorFlow_Lab/blob/master/Resource/使用ReLu作为激活函数的分类边界1.jpg)
+![使用ReLU作为激活函数的分类边界1](https://github.com/Joker2770/My_TensorFlow_Lab/blob/master/Resource/使用ReLU作为激活函数的分类边界1.jpg)
 
 _图2.14 使用ReLU作为激活函数的分类边界
 
