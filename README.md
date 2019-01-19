@@ -569,6 +569,58 @@ _图2.10 三种激活函数的区别_ <br>
 
 ### 2.4.4ReLU函数
 
+ReLU函数—— ReLU(The Rectified Linear Unit)函数的公式为 
+
+![ReLU函数公式](https://github.com/Joker2770/My_TensorFlow_Lab/blob/master/Resource/ReLU函数公式.jpg)
+
+函数图像如图2.11所示： 
+
+![ReLU函数图像](https://github.com/Joker2770/My_TensorFlow_Lab/blob/master/Resource/ReLU函数图像.jpg)
+
+_图2.11 ReLU函数图像_ <br>
+
+当x小于0时，y等于0。当x大于0时，y等于x。ReLU的中文名称是校正线性单元，虽然在x小于0时函数是线性的，x大于0时函数也是线性的，
+但是组合起来之后，函数就具有了非线性的特征。这种非线性的特征是怎么体现的呢，我们可以观察一下下面的一系列图片，首先看到图2.12： 
+
+![使用tanh作为激活函数的分类边界](https://github.com/Joker2770/My_TensorFlow_Lab/blob/master/Resource/使用tanh作为激活函数的分类边界.jpg)
+
+_图2.12 使用tanh作为激活函数的分类边界_ <br>
+
+图2.12使用的是tanh作为激活函数训练出来的分类模型，其实使用sigmoid或者softsign函数也可以得到类似结果。我使用了带有4个隐藏层的神经网训练了出了这个模型，
+图中有两个类别的数据，并且我们可以观察到一个类似椭圆形的分类边界把两个类别给区分开了。我们再观察图2.13：
+
+![使用ReLu作为激活函数的分类边界](https://github.com/Joker2770/My_TensorFlow_Lab/blob/master/Resource/使用ReLu作为激活函数的分类边界.jpg)
+
+_图2.13 使用ReLu作为激活函数的分类边界_ <br>
+
+我使用带有4个隐藏层的神经网络训练出了这个模型。我们发现使用ReLU激活函数得到的分类边界跟使用tanh激活函数得到分类边界是差不多的，并不能看出ReLU函数的特点。
+同样的一个学习任务和数据，我改变了神经网络的层数，只使用2个隐藏层，依然使用ReLU激活函数得到了图2.14的结果：
+
+![使用ReLU作为激活函数的分类边界1](https://github.com/Joker2770/My_TensorFlow_Lab/blob/master/Resource/使用ReLu作为激活函数的分类边界1.jpg)
+
+_图2.14 使用ReLU作为激活函数的分类边界
+
+我们观察图2.14可以得到一些结论：
+
+*我们可以发现ReLU激活函数所描绘出来的边界其实是一条一条的直线构成的，不存在曲线。图2.13中的边界看起来像一个椭圆，实际上它也有有一段一段很小的直线构成的。
+
+*神经网络的层数会影响模型的拟合效果，层数越多，模型就可以拟合出更复杂的分类边界。
+
+模型的拟合效果其实还跟其他一些因素相关，比如说每一层隐藏层的神经元越多，那么模型的拟合能力也就越强。模型训练的周期越多，模型的拟合能力就越强。
+关于模型拟合强弱的问题，再后面的章节中我们还会进一步讨论。
+
+另外我们再来看一下ReLU应用于回归预测时的特点，我看一下图2.15和图2.16：
+
+![使用tanh激活函数训练的回归模型](https://github.com/Joker2770/My_TensorFlow_Lab/blob/master/Resource/使用tanh激活函数训练的回归模型.jpg)
+
+_图2.15 使用tanh激活函数训练的回归模型_ <br>
+
+![使用ReLU激活函数训练的回归模型](https://github.com/Joker2770/My_TensorFlow_Lab/blob/master/Resource/使用ReLU激活函数训练的回归模型.jpg)
+
+_图2.16 使用ReLU激活函数训练的回归模型_ <br>
+
+我们发现了跟分类中类似的情况，tanh激活函数得到的回归线是一条曲线，而ReLU激活函数得到的是由一段一段直线构成的回归线。
+
 # 二、一元二次方程([_07_OnePowerDistance.py](https://github.com/Joker2770/My_TensorFlow_Lab/blob/master/src/_07_OnePowerDistance.py))
 
 # 三、mnist数据集([mnist](https://github.com/Joker2770/My_TensorFlow_Lab/blob/master/src/mnist))
