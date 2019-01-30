@@ -621,6 +621,33 @@ _图2.16 使用ReLU激活函数训练的回归模型_ <br>
 
 我们发现了跟分类中类似的情况，tanh激活函数得到的回归线是一条曲线，而ReLU激活函数得到的是由一段一段直线构成的回归线。
 
+## 2.5 BP网络模型和公式推导
+
+### 2.5.1BP网络模型
+
+假设我们有一个2层(统计神经网络层数的时候一般输入层忽略不计)的神经网络如图2.17所示：
+
+![BP神经网络](https://github.com/Joker2770/My_TensorFlow_Lab/blob/master/Resource/BP神经网络.jpg)
+
+_图2.17 BP神经网络_ <br>
+
+该网络的输入向量为X = （x1，x2，...，xi，...，xn），图中x0 = 1表示输入层偏置值。隐藏层输出向量为Y1 = (y11，y12，...，y1j，...，y1m)，图中y10 = 1表示隐藏层偏置值。
+输出层输出向量为Y2 = (y21，y22，...，y2k，...，y2l)。期望输出T = （t1，t2，...，tk，...，tl）。输入层到隐藏层之间的权值用矩阵W1表示，W1ij表示W1矩阵中第i行第j列的权值。
+隐藏层到输出层之间的权值用矩阵W2表示，W2jk表示W2矩阵中第j行第k列的权值。另外我们定义net1为隐藏层中权值乘以输入层信号的总和，
+net1j表示隐藏层中第j个神经元得到的输入信号总和。net2为输出层中权值乘以隐藏层信号的总和，net2k表示输出层中第k个神经元得到的输入信号总和。
+
+对于隐藏层有： 
+
+![BP隐藏层](https://github.com/Joker2770/My_TensorFlow_Lab/blob/master/Resource/BP隐藏层.jpg)
+
+对于输出层有：
+
+![BP输出层](https://github.com/Joker2770/My_TensorFlow_Lab/blob/master/Resource/BP输出层.jpg)
+
+公式2.13和2.15中的激活函数假设我们都使用sigmoid函数，sigmoid函数的公式在上文中的公式2.8。sigmoid函数具有连续、可导的特点，它的导数为：
+
+![sigmoid函数导数](https://github.com/Joker2770/My_TensorFlow_Lab/blob/master/Resource/sigmoid函数导数.jpg)
+
 # 二、一元二次方程([_07_OnePowerDistance.py](https://github.com/Joker2770/My_TensorFlow_Lab/blob/master/src/_07_OnePowerDistance.py))
 
 # 三、mnist数据集([mnist](https://github.com/Joker2770/My_TensorFlow_Lab/blob/master/src/mnist))
