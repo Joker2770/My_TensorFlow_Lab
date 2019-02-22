@@ -648,7 +648,7 @@ net1j表示隐藏层中第j个神经元得到的输入信号总和。net2为输�
 
 ![sigmoid函数导数](https://github.com/Joker2770/My_TensorFlow_Lab/blob/master/Resource/sigmoid函数导数.jpg)
 
-2.5.2BP算法推导
+### 2.5.2BP算法推导
 
 根据上文中提到的代价函数，当网络输出与期望输出不同时，会存在输出误差E，为了简单我们只计算一个样本的均方差公式，如果是计算多个样本可以求所有样本代价函数的平均值。
 一个样本的均方差公式定义如下： 
@@ -735,6 +735,66 @@ W1表示输入层到一个隐藏层的权值矩阵，Wh+1表示最后一个隐�
 按照以上规律逐层类推，则第一个隐藏层的权值调整公式为：
 
 ![第一个隐藏层的权值调整公式](https://github.com/Joker2770/My_TensorFlow_Lab/blob/master/Resource/第一个隐藏层的权值调整公式.jpg)
+
+### 2.5.3BP算法推导的补充说明
+
+我们已经从头到尾详细推导了一遍BP算法的整个流程，在这一小节中对BP算法再做两点补充说明：
+
+#### 1.网络的偏置值。
+
+在上文中我们的推导过程一直是使用权值w来进行计算的，如果我们把偏置值独立出来，那么偏置值的参数应该怎么调整呢？
+
+我们可以看到公式2.26以及2.27，在公式2.26中，把i的取值设置为0，并且我们知道x0 = 1，所以我们可以得到： 
+
+![239](https://github.com/Joker2770/My_TensorFlow_Lab/blob/master/Resource/239.jpg)
+
+在公式2.26中，把j的取值设置为0，并且我们知道y0 = 1，所以我们可以得到：
+
+![240](https://github.com/Joker2770/My_TensorFlow_Lab/blob/master/Resource/240.jpg)
+
+如果是把偏置值单独拿出来计算的话就是公式2.39和2.40的表达式。
+
+#### 2.用矩阵形式来表达BP学习算法。
+
+下面我们直接给出BP学习算法矩阵表达形式的结果，具体推导过程跟上文中的推导过程类似，不过会涉及到矩阵求导的相关知识，大家有兴趣的话可以自己推导一下。
+如果是把BP学习算法写成矩阵的形式来表达，假设一共有h个隐藏层。输入数据的矩阵为X，X中的每一行表示一个数据，列表示数据的特征。比如我们一次性输入3个数据，
+每个数据有4个特征，那么X就是一个3行4列的矩阵。
+
+各隐藏层输出分别记为：Y1，Y2，...，Yh，输出层的输出记为：Yh+1。Y中的每一个行表示一个数据的标签。比如我们有3个数据，每个数据有1个标签，那么Y就是一个3行1列的矩阵。
+
+各层权值矩阵分别记为：W1，W2，...，Wh+1，W1表示输入层到一个隐藏层的权值矩阵，Wh+1表示最后一个隐藏层到输出层的权值矩阵。权值矩阵的行等于前一层的神经元个数，
+权值矩阵的列对应于后一层的神经元个数。比如在输入层和第一个隐藏层之间的权值矩阵是W1，输入层有3个神经元，第一个隐藏层有10个神经元，那么W1就是一个3行10列的矩阵。
+
+各层学习信号分别记为：δ1，δ2，...，δh+1，δh+1表示输出层计算出的学习信号。
+
+对于输出层的学习信号δh+1： 
+
+![对于输出层的学习信号](https://github.com/Joker2770/My_TensorFlow_Lab/blob/master/Resource/对于输出层的学习信号.jpg)
+
+公式2.41中的“ 。”符号是element-wise multiplication，意思是矩阵中的元素对应相乘。例如下面的例子： 
+
+![矩阵中的元素对应相乘](https://github.com/Joker2770/My_TensorFlow_Lab/blob/master/Resource/矩阵中的元素对应相乘.jpg)
+
+对于第h隐藏层的学习信号δh： 
+
+![对于第h隐藏层的学习信号δh](https://github.com/Joker2770/My_TensorFlow_Lab/blob/master/Resource/对于第h隐藏层的学习信号δh.jpg)
+
+对于第1隐藏层的学习信号δ1：
+
+![对于第1隐藏层的学习信号δ1](https://github.com/Joker2770/My_TensorFlow_Lab/blob/master/Resource/对于第1隐藏层的学习信号δ1.jpg)
+
+对于输出层的权值矩阵Wh+1：
+
+![对于输出层的权值矩阵](https://github.com/Joker2770/My_TensorFlow_Lab/blob/master/Resource/对于输出层的权值矩阵.jpg)
+
+对于第h隐藏层权值矩阵Wh： 
+
+![对于输出层的权值矩阵Wh](https://github.com/Joker2770/My_TensorFlow_Lab/blob/master/Resource/对于输出层的权值矩阵Wh.jpg)
+
+对于第1隐藏层权值矩阵W1：
+
+![对于输出层的权值矩阵W1](https://github.com/Joker2770/My_TensorFlow_Lab/blob/master/Resource/对于输出层的权值矩阵W1.jpg)
+
 
 # 二、一元二次方程([_07_OnePowerDistance.py](https://github.com/Joker2770/My_TensorFlow_Lab/blob/master/src/_07_OnePowerDistance.py))
 
