@@ -789,7 +789,7 @@ W1表示输入层到一个隐藏层的权值矩阵，Wh+1表示最后一个隐�
 
 对于第h隐藏层权值矩阵Wh： 
 
-![对于输出层的权值矩阵Wh](https://github.com/Joker2770/My_TensorFlow_Lab/blob/master/Resource/对于输出层的权值矩阵Wh.jpg)
+![对于第h隐藏层权值矩阵Wh](https://github.com/Joker2770/My_TensorFlow_Lab/blob/master/Resource/对于第h隐藏层权值矩阵Wh.jpg)
 
 对于第1隐藏层权值矩阵W1：
 
