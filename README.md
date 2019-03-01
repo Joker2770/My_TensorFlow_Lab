@@ -795,6 +795,56 @@ W1表示输入层到一个隐藏层的权值矩阵，Wh+1表示最后一个隐�
 
 ![对于输出层的权值矩阵W1](https://github.com/Joker2770/My_TensorFlow_Lab/blob/master/Resource/对于输出层的权值矩阵W1.jpg)
 
+## 2.6 梯度消失与梯度爆炸
+
+## 2.6.1 梯度消失
+
+根据上文BP算法中的推导，我们从公式2.44,2.45,2.46中可以知道，权值的调整ΔW是跟学习信号δ相关的。同时我们从2.41,2.42,2.43中可以知道在学习信号δ 表达式中存在f ' (x)。也就是说激活函数的导数会影响学习信号δ的值，而学习信号δ的值会影响权值调整ΔW的值。那么激活函数的值越大，ΔW的值就越大；激活函数的值越小，ΔW的值也就越小。
+
+假设激活函数为sigmoid函数，前文中我们已经知道了sigmoid函数的表达式为： 
+
+![sigmoid函数公式](https://github.com/Joker2770/My_TensorFlow_Lab/blob/master/Resource/sigmoid函数公式.jpg)
+
+，sigmoid函数的导数为：f ' (x) = f(x)[1-f(x)]，我们可以画出sigmoid函数的导数图像为图2.18： 
+
+![sigmoid函数的导数图像](https://github.com/Joker2770/My_TensorFlow_Lab/blob/master/Resource/sigmoid函数的导数图像.jpg)
+
+_图2.18 sigmoid函数导数_ <br>
+
+这里我们发现当x=0时，sigmoid函数导数可以取得最大值0.25。x取值较大或较小时，sigmoid函数的导数很快就趋向于0。不管怎么样，sigmoid函数的导数都是一个小于1的数，
+学习信号δ乘以一个小于1的数，那么δ就会减小。学习信号从输出层一层一层向前反向传播的时候，每传播一层学习信号就会变小一点，经过多层传播后，学习信号就会接近于0，
+从而使得权值ΔW调整接近于0。ΔW接近于0那就意味着该层的参数不会发生改变，不能进行优化。参数不能优化，那整个网络就不能再进行学习了。
+学习信号随着网络传播逐渐减小的问题也被称为梯度消失(vanishing gradient)的问题。
+
+我们再考虑一下tanh函数的导数，tanh函数的表达式为：
+
+![双曲正切函数公式](https://github.com/Joker2770/My_TensorFlow_Lab/blob/master/Resource/双曲正切函数公式.jpg)
+
+tanh函数的导数为： f ' (x) = 1- (f(x))2，tanh函数的导数如图2.19：
+
+![tanh函数导数图像](https://github.com/Joker2770/My_TensorFlow_Lab/blob/master/Resource/tanh函数导数图像.jpg) 
+
+_图2.19 tanh函数导数_ <br>
+
+tanh函数导数图像看起来比sigmoid函数要好一些，x=0时，tanh函数导数可以取得最大值1。x取值较大或较小时，tanh函数的导数很快就趋向于0。不管怎么样，
+tanh函数导数的取值总是小于1的，所以tanh作为激活函数也会存在梯度消失的问题。
+
+对于softsign函数，softsign函数的表达式为：
+
+![softsign函数的公式](https://github.com/Joker2770/My_TensorFlow_Lab/blob/master/Resource/softsign函数的公式.jpg)
+
+softsign函数的导数为：
+
+![softsign函数的导数](https://github.com/Joker2770/My_TensorFlow_Lab/blob/master/Resource/softsign函数的导数.jpg)
+
+softsign函数的导数如图2.20： 
+
+![softsign函数导数图像](https://github.com/Joker2770/My_TensorFlow_Lab/blob/master/Resource/softsign函数导数图像.jpg)
+
+_图2.20 softsign函数导数_ <br>
+
+softsign函数x=0时，softsign函数导数可以取得最大值1。x取值较大或较小时，softsign函数的导数很快就趋向于0。不管怎么样，softsign函数导数的取值总是小于1的，
+所以softsign作为激活函数也会存在梯度消失的问题。
 
 # 二、一元二次方程([_07_OnePowerDistance.py](https://github.com/Joker2770/My_TensorFlow_Lab/blob/master/src/_07_OnePowerDistance.py))
 
