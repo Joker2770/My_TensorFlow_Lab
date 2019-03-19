@@ -878,8 +878,52 @@ ReLU也存在缺点，由于x小于0的部分f(x)的取值恒定为0，会导致
 
 ![accuracy图像](https://github.com/Joker2770/My_TensorFlow_Lab/blob/master/Resource/accuracy图像.jpg)
 
+## 2.7 使用BP神经网络解决异或问题
 
-# 二、一元二次方程([_07_OnePowerDistance.py](https://github.com/Joker2770/My_TensorFlow_Lab/blob/master/src/_07_OnePowerDistance.py))
+代码[_07_BPXOR.py](https://github.com/Joker2770/My_TensorFlow_Lab/blob/master/src/_07_BPXOR.py)：BP神经网络解决异或问题
+
+程序的输出结果为：
+~~~
+epochs 0 loss 0.21914938776385912
+epochs 5000 loss 0.11848943046512897
+epochs 10000 loss 0.07584832296969335
+epochs 15000 loss 0.02081529755970813
+epochs 20000 loss 0.006791104652688612
+epochs 25000 loss 0.00347537604347784
+epochs 30000 loss 0.002214137161812754
+epochs 35000 loss 0.0015846969612142681
+epochs 40000 loss 0.0012168649734302002
+epochs 45000 loss 0.000979035374693999
+epochs 50000 loss 0.0008141367915345103
+epochs 55000 loss 0.0006938273165481596
+epochs 60000 loss 0.0006025823118787628
+epochs 65000 loss 0.0005312435415994395
+epochs 70000 loss 0.00047408582121212625
+epochs 75000 loss 0.0004273593960833713
+epochs 80000 loss 0.00038851258530058115
+epochs 85000 loss 0.00035575261105233317
+epochs 90000 loss 0.0003277853028390947
+epochs 95000 loss 0.0003036544434920989
+epochs 100000 loss 0.00028263911503724915
+~~~
+
+![BPXOR](https://github.com/Joker2770/My_TensorFlow_Lab/blob/master/Resource/BPXOR.png)
+
+预测结果：
+~~~
+output
+[[0.02169402]
+ [0.97973978]
+ [0.97647214]
+ [0.02405968]]
+0
+1
+1
+0
+~~~
+
+
+# 二、一元二次方程([_08_OnePowerDistance.py](https://github.com/Joker2770/My_TensorFlow_Lab/blob/master/src/_07_OnePowerDistance.py))
 
 # 三、mnist数据集([mnist](https://github.com/Joker2770/My_TensorFlow_Lab/blob/master/src/mnist))
 
