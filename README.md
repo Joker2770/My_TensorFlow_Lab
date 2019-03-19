@@ -923,7 +923,7 @@ output
 ~~~
 
 
-# 二、一元二次方程([_08_OnePowerDistance.py](https://github.com/Joker2770/My_TensorFlow_Lab/blob/master/src/_07_OnePowerDistance.py))
+# 二、一元二次方程([_08_OnePowerDistance.py](https://github.com/Joker2770/My_TensorFlow_Lab/blob/master/src/_08_OnePowerDistance.py))
 
 # 三、mnist数据集([mnist](https://github.com/Joker2770/My_TensorFlow_Lab/blob/master/src/mnist))
 
