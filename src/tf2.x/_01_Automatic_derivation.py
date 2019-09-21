@@ -27,8 +27,8 @@ SOFTWARE.
 
 import tensorflow as tf
 
-x = tf.Variable(initial_value = 4.)
+x = tf.Variable(initial_value = 3.)
 with tf.GradientTape() as tape:
-	y = tf.neg(tf.square(x))
+	y = tf.sqrt(x)
 y_grad = tape.gradient(y, x)
 print([y, y_grad])
